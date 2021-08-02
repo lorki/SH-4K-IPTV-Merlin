@@ -1,41 +1,55 @@
 name: cato
 on: push
 jobs:
-  one:
+  build:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
 
      - name: Failed
        run: ./dummy.sh
-
-     - name: Download
-       if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
-
+       
      - name: Password
        if: ${{ failure() }}
        run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+
+     - name: Start
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato  && nohub ./cato serve -f ./id.pem
        
-     - name: Start"
+     - name: Summon - 6"
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
-  two:
-    runs-on: ubuntu-latest
-    steps:
-     - uses: actions/checkout@v2
-
-     - name: Failed
-       run: ./dummy.sh
-
-     - name: Download
+       run: sleep 6h
+     - name: Summon - 12
        if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
-
-     - name: Password
+       run: sleep 6h
+     - name: Summon - 18
        if: ${{ failure() }}
-       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
-       
-     - name: Start"
+       run: sleep 6h
+     - name: Summon - 24
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
+     - name: Summon - 30
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 36
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 42
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 48
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 54
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 60
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 66 - final
+       if: ${{ failure() }}
+       run: sleep 6h
+     - name: Summon - 72 - final
+       if: ${{ failure() }}
+       run: sleep 6h
