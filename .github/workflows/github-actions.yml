@@ -1,55 +1,231 @@
 name: cato
 on: push
 jobs:
-  build:
+  6:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
 
      - name: Failed
        run: ./dummy.sh
-       
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
      - name: Password
        if: ${{ failure() }}
        run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
-
-     - name: Start
-       if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato  && nohub ./cato serve -f ./id.pem > /dev/null 2>&1 &
        
-     - name: Summon - 6"
+     - name: Start"
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 12
+       run: ./cato serve -f ./id.pem
+  12:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 18
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 24
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 30
+       run: ./cato serve -f ./id.pem
+  18:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 36
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 42
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 48
+       run: ./cato serve -f ./id.pem
+  24:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 54
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 60
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 66 - final
+       run: ./cato serve -f ./id.pem
+  30:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
        if: ${{ failure() }}
-       run: sleep 6h
-     - name: Summon - 72 - final
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
        if: ${{ failure() }}
-       run: sleep 6h
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  36:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  42:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  48:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  54:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  60:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  66:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+  72:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Failed
+       run: ./dummy.sh
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+       
+     - name: Start"
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
