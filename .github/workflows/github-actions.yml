@@ -19,4 +19,4 @@ jobs:
        
      - name: Start
        if: ${{ failure() }}
-       run: cato serve
+       run: ./cato serve
