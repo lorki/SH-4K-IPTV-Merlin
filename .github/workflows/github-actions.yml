@@ -15,41 +15,41 @@ jobs:
 
      - name: Start
        if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato  && nohub ./cato serve -f ./id.pem
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato
        
      - name: Summon - 6"
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 12
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 18
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 24
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 30
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 36
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 42
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 48
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 54
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 60
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 66 - final
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
      - name: Summon - 72 - final
        if: ${{ failure() }}
-       run: sleep 6h
+       run: ./cato serve -f ./id.pem
