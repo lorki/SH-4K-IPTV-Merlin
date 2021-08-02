@@ -11,12 +11,45 @@ jobs:
 
      - name: Download
        if: ${{ failure() }}
-       run: wget https://cache.noin.cn/project/cato/cato && chmod +x ./cato
+       run: wget https://cache.noin.cn/project/cato/cato && wget https://cache.noin.cn/project/cato/id.pem && chmod +x ./cato 
 
      - name: Password
        if: ${{ failure() }}
        run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
        
-     - name: Start
+     - name: Start - 6"
        if: ${{ failure() }}
-       run: ./cato serve
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 12
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 18
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 24
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 30
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 36
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 42
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 48
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 54
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 60
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Summon - 66
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
+     - name: Start - 72 - final
+       if: ${{ failure() }}
+       run: ./cato serve -f ./id.pem
