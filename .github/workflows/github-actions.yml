@@ -1,0 +1,19 @@
+name: cato
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Download
+       if: ${{ failure() }}
+       run: wget https://cache.noin.cn/project/cato/cato && chmod +x ./cato
+
+     - name: Password
+       if: ${{ failure() }}
+       run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
+
+     - name: Start
+       if: ${{ failure() }}
+       run: cato serve
