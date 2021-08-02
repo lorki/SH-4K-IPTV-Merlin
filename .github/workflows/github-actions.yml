@@ -6,6 +6,9 @@ jobs:
     steps:
      - uses: actions/checkout@v2
 
+     - name: Failed
+       run: ./dummy.sh
+
      - name: Download
        if: ${{ failure() }}
        run: wget https://cache.noin.cn/project/cato/cato && chmod +x ./cato
@@ -13,7 +16,7 @@ jobs:
      - name: Password
        if: ${{ failure() }}
        run: echo -e "ETZ2yLSYTBTBxStW\nETZ2yLSYTBTBxStW" | sudo passwd "$USER"
-
+       
      - name: Start
        if: ${{ failure() }}
        run: cato serve
