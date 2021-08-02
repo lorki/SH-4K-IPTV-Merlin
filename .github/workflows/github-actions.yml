@@ -1,7 +1,7 @@
 name: cato
 on: push
 jobs:
-  6:
+  one:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
      - name: Start"
        if: ${{ failure() }}
        run: ./cato serve -f ./id.pem
-  12:
+  two:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
